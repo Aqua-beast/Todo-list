@@ -22,6 +22,10 @@ function success(res, payload) {
   return res.status(200).json(payload);
 }
 
+app.get("/", async (req, res) => {
+  res.send('hello there');
+})
+
 app.get("/todos", async (req, res, next) => {
   try {
     // use the Todo model to retrieve all todos from the database
